@@ -91,26 +91,26 @@ bindsym $mod+a focus parent
 
 # switch to workspace
 bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
+bindsym $mod+2 workspace 2: www
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
+bindsym $mod+9 workspace 9: status
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+2 move container to workspace 2: www
 bindsym $mod+Shift+3 move container to workspace 3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+9 move container to workspace 9: status
 bindsym $mod+Shift+0 move container to workspace 10
 
 # move current workspace between monitors
@@ -172,7 +172,7 @@ exec --no-startup-id xrandr --output DP2-2 --auto && xrandr --output DP2-1 --aut
 # bind workspaces to output
 workspace 1          output DP2-2
 workspace "2: www"   output DP2-1
-workspace "3: status"  output eDP1
+workspace "9: status"  output eDP1
 
 # volume
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
@@ -185,12 +185,5 @@ bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
 bindsym XF86Calculator exec gnome-calculator
 bindsym XF86Explorer exec google-chrome
 bindsym XF86Mail exec thunderbird -compose
-bindsym XF86HomePage exec nemo
+bindsym XF86HomePage exec nemo --no-desktop
 bindsym Print exec scrot '%Y-%m-%d_%T_scrot.png' -e 'mv $f ~/Pictures/screenshots/'
-
-# media keys
-bindsym $mod+Home exec curl http://localhost:2000/command/default/playpause
-bindsym $mod+Next exec curl http://localhost:2000/command/default/prev
-bindsym $mod+Prior exec curl http://localhost:2000/command/default/next
-
-
