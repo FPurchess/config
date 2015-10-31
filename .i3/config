@@ -18,9 +18,9 @@ set $w10 10
 for_window [class="(?i)Chrome"] border none
 for_window [window_role="pop-up"] floating enable
 
-assign [class="^Google Chrome$"] $w2
-assign [class="^(?i)hipchat$"] $w7
-assign [class="^Thunderbird$"] $w8
+assign [class="(?i)Chrome"] $w2
+assign [class="(?i)hipchat"] $w7
+assign [class="(?i)thunderbird"] $w8
 assign [class="(?i)conky"] $w9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
