@@ -15,7 +15,8 @@ set $w10 10
 
 
 #applications
-for_window [class="(?i)Chrome"] border none
+for_window [class="(?i)chrome"] border none
+for_window [class="(?i)atom"] border none
 for_window [window_role="pop-up"] floating enable
 for_window [class="(?i)gsimplecal"] floating enable
 
@@ -160,6 +161,9 @@ workspace $w2   output DP2-2
 workspace $w9   output eDP1
 
 # volume
+bindsym $mod+KP_Add exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
+bindsym $mod+KP_Subtract exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
 bindsym XF86AudioMute exec amixer sset Master toggle && killall -USR1 i3blocks
@@ -174,3 +178,4 @@ bindsym XF86Mail exec thunderbird -compose
 bindsym XF86HomePage exec nemo --no-desktop
 bindsym XF86ScreenSaver exec i3lock -c 000000
 bindsym Print exec scrot '%Y-%m-%d_%T_scrot.png' -e 'mv $f ~/Pictures/screenshots/'
+bindsym $mod+Shift+comma exec gsimplecal
