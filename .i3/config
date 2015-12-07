@@ -153,10 +153,9 @@ bar {
 for_window [class="(?i)Chrome"] border none
 for_window [window_role="pop-up"] floating enable
 
-exec --no-startup-id /usr/bin/nm-applet
-#exec --no-startup-id /usr/bin/gnome-settings-daemon
-
 exec --no-startup-id ~/.i3/autoxrandr.sh
+exec --no-startup-id /usr/bin/nm-applet
+exec --no-startup-id /usr/bin/dropbox start
 
 # bind workspaces to output
 workspace $w1   output DP2-1
