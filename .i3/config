@@ -4,10 +4,10 @@ font pango:DejaVu Sans Mono 10
 
 set $w1 1:terminal
 set $w2 2:www
-set $w3 3
+set $w3 3:ide
 set $w4 4
 set $w5 5
-set $w6 6
+set $w6 6:music
 set $w7 7:chat
 set $w8 8:mail
 set $w9 9:status
@@ -21,6 +21,9 @@ for_window [window_role="pop-up"] floating enable
 for_window [class="(?i)gsimplecal"] floating enable
 
 assign [class="(?i)chrome"] $w2
+assign [class="(?i)atom"] $w3
+assign [class="(?i)idea"] $w3
+assign [class="(?i)spotify"] $w6
 assign [class="(?i)hipchat"] $w7
 assign [class="(?i)thunderbird"] $w8
 assign [class="(?i)conky"] $w9
