@@ -182,3 +182,4 @@ bindsym XF86HomePage exec nemo --no-desktop
 bindsym XF86ScreenSaver exec i3lock -c 000000
 bindsym Print exec scrot '%Y-%m-%d_%T_scrot.png' -e 'mv $f ~/Pictures/screenshots/'
 bindsym $mod+Shift+comma exec gsimplecal
+bindsym $mod+Shift+n exec nautilus --no-desktop
