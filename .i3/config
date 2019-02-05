@@ -21,10 +21,13 @@ for_window [window_role="pop-up"] floating enable
 for_window [class="(?i)gsimplecal"] floating enable
 
 assign [class="(?i)chrome"] $w2
+assign [class="(?i)firefox"] $w2
 assign [class="(?i)atom"] $w3
 assign [class="(?i)idea"] $w3
+assign [class="(?i)android-studio"] $w3
 assign [class="(?i)spotify"] $w6
 assign [class="(?i)hipchat"] $w7
+assign [class="(?i)slack"] $w7
 assign [class="(?i)thunderbird"] $w8
 assign [class="(?i)conky"] $w9
 
