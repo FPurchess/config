@@ -16,6 +16,7 @@ set $w10 10
 
 #applications
 for_window [class="(?i)chrome"] border none
+for_window [class="(?i)firefox"] border none
 for_window [class="(?i)atom"] border none
 for_window [window_role="pop-up"] floating enable
 for_window [class="(?i)gsimplecal"] floating enable
