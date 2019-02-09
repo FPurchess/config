@@ -13,6 +13,14 @@ set $w8 8:mail
 set $w9 9:status
 set $w10 10
 
+# kick off the magic
+exec --no-startup-id ~/.i3/display.sh # configure xrandr
+exec --no-startup-id killall -q notify-osd # stop current notification daemon
+exec --no-startup-id dunst # start dunst
+exec --no-startup-id nitrogen --restore # start nitrogen
+exec --no-startup-id /usr/bin/nm-applet # start network monitor
+#exec --no-startup-id /usr/bin/dropbox start
+
 
 #applications
 for_window [class="(?i)chrome"] border none
@@ -164,10 +172,6 @@ bar {
 # applications
 for_window [class="(?i)Chrome"] border none
 for_window [window_role="pop-up"] floating enable
-
-exec --no-startup-id ~/.i3/autoxrandr.sh
-exec --no-startup-id /usr/bin/nm-applet
-exec --no-startup-id /usr/bin/dropbox start
 
 # bind workspaces to output
 workspace $w1   output DP2-1
